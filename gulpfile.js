@@ -7,25 +7,26 @@ var gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	cssmin = require('gulp-cssmin');
 
+// перезагрузка страницы браузера
+gulp.task('browser-sync', function() {
+	browserSync.init({
+		server: { baseDir: 'app' },
+		notify: false
+	});
+});
+
 // преобразование sass в css
 gulp.task('sass', function() {
 	return gulp
-		.src('app/sass/**/*.sass')
+		.src('app/sass/*.sass')
 		.pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
 		.pipe(
 			autoprefixer(['last 4 versions', '> 1%', 'ie 8', 'ie 7'], {
 				cascade: false
 			})
 		)
-		.pipe(gulp.dest('app/static/styles'));
-});
-
-// перезагрузка страницы браузера
-gulp.task('browser-sync', function() {
-	browserSync.init({
-		server: { baseDir: 'app/' },
-		notify: false
-	});
+		.pipe(gulp.dest('app/static/styles'))
+		.pipe(browserSync.reload({ stream: true }));
 });
 
 // минификация css
@@ -38,9 +39,9 @@ gulp.task('minify-css', function() {
 
 // наблюдение за изменениями
 gulp.task('watch', ['browser-sync'], function() {
-	gulp.watch('app/sass/**/*.sass', ['sass']);
-	gulp.watch('app/*.html', browserSync.reload);
+	gulp.watch('app/sass/*.sass', ['sass']);
 	gulp.watch('app/static/js/**/*.js');
+	gulp.watch('app/*.html', browserSync.reload);
 });
 
 // почистить кеш

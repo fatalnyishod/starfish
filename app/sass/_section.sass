@@ -1,0 +1,81 @@
+.section
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 100%
+	margin-bottom: 4em
+	border-bottom: 4px solid #4A2F51
+
+	.grid
+		flex-direction: column
+		align-items: center
+
+	&__title
+		display: flex
+		align-items: center
+		justify-content: space-between
+		width: 100%
+		font-size: 2.5rem
+		font-weight: normal
+		text-align: center
+		color: #4A2F51
+		&::after,
+		&::before
+			content: ''
+			width: 60px
+			height: 4px
+			background: #4A2F51
+
+	&__subtitle
+		font-size: 1.6rem
+		font-weight: normal
+		text-align: center
+		color: #5B5B5B
+
+	&__wrap
+		display: flex
+		justify-content: space-between
+		width: 100%
+
+		&_1
+			align-items: center
+			padding: 100px 12em 5em 12em
+			.img 
+				width: 60%
+				height: 500px
+				border: 1px solid #000
+			.item
+				display: flex
+				flex-direction: column
+				width: 35%
+
+				.title_h2
+					margin-bottom: 1.7em
+					line-height: 2.5rem
+		
+		&_2
+			align-items: center
+			padding: 100px 12em 5em 12em
+			margin-bottom: 4em
+			
+			.img 
+				width: 48%
+				height: 300px
+				border: 1px solid #000
+			.item
+				display: flex
+				flex-direction: column
+				width: 48%
+
+				.title_h2
+					font-size: 2.2rem
+					line-height: 1.5rem
+				.title_h1
+					line-height: 7rem
+					margin-bottom: .3em
+				p
+					margin-bottom: 1em
+					font-size: 1.4rem
+					line-height: 1.5rem
+
+

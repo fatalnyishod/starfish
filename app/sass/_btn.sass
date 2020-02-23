@@ -1,0 +1,22 @@
+.btn
+	width: fit-content
+	padding: 16px 46px
+	font-size: 1.4rem
+
+	&_violet
+		background: #4A2F51
+		color: #fff
+		transition: background .3s ease-out
+
+		@media #{$hover}
+			&:hover
+				background: lighten(#4A2F51, 20%)
+	
+	&_violet-light
+		background: #E4DBE7
+		color: #4A2F51
+		transition: background .3s ease-out
+
+		@media #{$hover}
+			&:hover
+				background: darken(#E4DBE7, 20%)
