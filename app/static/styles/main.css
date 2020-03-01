@@ -162,6 +162,32 @@ label {
           align-items: center;
 }
 
+.section_color {
+  padding: 3em 0;
+  background: -webkit-gradient(linear, left top, right top, from(#4A2F51), to(#352C52));
+  background: -o-linear-gradient(left, #4A2F51, #352C52);
+  background: linear-gradient(to right, #4A2F51, #352C52);
+}
+
+.section_color .section__title {
+  color: #fff;
+}
+
+.section_color .section__title::after, .section_color .section__title::before {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: #fff;
+}
+
+.section_color .wrap_logo {
+  width: 80%;
+}
+
+.section_color .wrap_logo .logo {
+  width: 22%;
+}
+
 .section__title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -273,6 +299,113 @@ label {
   line-height: 1.5rem;
 }
 
+.wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45%;
+  margin-top: 4em;
+}
+
+.wrap .img {
+  width: 3em;
+  min-width: 3em;
+  height: 3em;
+  border: 1px solid #000;
+}
+
+.wrap p {
+  margin-left: 1em;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+}
+
+.wrap strong {
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+}
+
+.wrap_logo {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 40%;
+}
+
+.wrap_logo .logo {
+  width: 45%;
+  height: 110px;
+  margin-bottom: 2em;
+  border: 1px solid #000;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+  margin-top: 2em;
+}
+
+.container__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container__item div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4em;
+}
+
+.container__item div span {
+  margin-right: .5em;
+}
+
+.container__item div p {
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+}
+
+.container__item img {
+  position: relative;
+  top: 3em;
+  height: 370px;
+  width: 270px;
+  margin-left: 2em;
+  border: 1px solid #000;
+}
+
+.quote {
+  width: 60%;
+  margin: 2em 0;
+  padding: 1em 0;
+  border-top: 4px solid #352C52;
+  border-bottom: 4px solid #352C52;
+  color: #352C52;
+  font-size: 1.8em;
+  text-align: center;
+}
+
 .title_h1 {
   font-size: 6em;
   font-weight: bold;
@@ -284,6 +417,11 @@ label {
   font-size: 2.5rem;
   font-weight: normal;
   color: #4A2F51;
+}
+
+.title_h3 {
+  font-size: 1.8em;
+  color: #fff;
 }
 
 .btn {
@@ -320,4 +458,74 @@ label {
   .btn_violet-light:hover {
     background: #b69ebe;
   }
+}
+
+.btn_red {
+  background: #DE3236;
+  color: #fff;
+  -webkit-transition: background .3s ease-out;
+  -o-transition: background .3s ease-out;
+  transition: background .3s ease-out;
+}
+
+@media (min-width: 619px) {
+  .btn_red:hover {
+    background: #855492;
+  }
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.footer .grid {
+  width: 70%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 6em;
+}
+
+.footer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25%;
+}
+
+.footer__item .icon {
+  width: 60px;
+  height: 50px;
+  margin-bottom: 1em;
+  border: 1px solid #000;
+}
+
+.footer__item .phone {
+  font-size: 2em;
+  color: #352C52;
+  margin: 0;
+  padding: 0 !important;
+}
+
+.footer__item strong {
+  font-weight: normal;
+  font-size: 1.5em;
+}
+
+.footer__item span {
+  margin-bottom: 1em;
+  padding-right: 4em;
 }

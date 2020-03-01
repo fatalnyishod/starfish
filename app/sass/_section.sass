@@ -10,6 +10,25 @@
 		flex-direction: column
 		align-items: center
 
+	&_color
+		padding: 3em 0
+		background: linear-gradient(to right, #4A2F51, #352C52)
+
+		.section__title
+			color: #fff
+			&::after,
+			&::before
+				content: ''
+				width: 60px
+				height: 4px
+				background: #fff
+		
+		.wrap_logo
+			width: 80%
+
+			.logo
+				width: 22%
+
 	&__title
 		display: flex
 		align-items: center
@@ -78,4 +97,75 @@
 					font-size: 1.4rem
 					line-height: 1.5rem
 
+.wrap
+	display: flex
+	align-self: center
+	align-items: center
+	width: 45%
+	margin-top: 4em
 
+	.img
+		width: 3em 
+		min-width: 3em 
+		height: 3em
+		border: 1px solid #000
+	
+	p
+		margin-left: 1em
+		font-size: 1.4rem
+		line-height: 1.5rem
+
+	strong
+		font-size: 1.4rem
+		line-height: 1.5rem
+	
+	&_logo
+		flex-wrap: wrap
+		justify-content: space-between
+		width: 40%
+
+		.logo
+			width: 45%
+			height: 110px
+			margin-bottom: 2em
+			border: 1px solid #000
+
+.container
+	display: flex
+	justify-content: space-between
+	width: 50%
+	margin-top: 2em
+	
+	&__item
+		display: flex
+		flex-direction: column
+
+		div
+			display: flex
+			align-items: center
+			margin-bottom: 4em
+
+			span
+				margin-right: .5em
+			
+			p
+				font-size: 1.4rem
+				line-height: 1.5rem
+			
+		img
+			position: relative
+			top: 3em
+			height: 370px
+			width: 270px
+			margin-left: 2em
+			border: 1px solid #000
+
+.quote
+	width: 60%
+	margin: 2em 0
+	padding: 1em 0
+	border-top: 4px solid #352C52
+	border-bottom: 4px solid #352C52
+	color: #352C52
+	font-size: 1.8em
+	text-align: center
