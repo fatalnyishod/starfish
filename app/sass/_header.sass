@@ -17,10 +17,14 @@
 	&__logo	
 		width: 220px
 		height: 150px
-		border: 1px solid green
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
 	
 	&__nav-item
-		padding: 16px 12px
+		padding: 10px 20px
 		font-size: 1.3rem
 		color: $sec-color
 		background: #fff
@@ -30,3 +34,8 @@
 		@media #{$hover}
 			&:hover
 				background: #E4DBE7
+
+		&_cont
+			padding: 10px 20px
+			font-weight: 600
+			border: 3px solid $sec-color
