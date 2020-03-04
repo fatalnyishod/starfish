@@ -79,7 +79,7 @@ label {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1300px;
 }
 
 .header {
@@ -541,7 +541,7 @@ label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 25%;
+  width: 23%;
 }
 
 .footer__item .icon {
